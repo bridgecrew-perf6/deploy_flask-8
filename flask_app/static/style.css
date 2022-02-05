@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+}
+html{
+        /*background*/
+        background-image: url("bk.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+}
+body{
+    /* dimensions */
+    height: 100vh;
+    width: 100vw;
+    /*grid*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*font*/
+    font-family: 'Shadows Into Light';
+    font-size: 2vh;
+    color: rgba(000,000,000,0.9);
+    text-align: center;
+}
+h2, h3, h3, h4, h5{
+    font-family: 'Permanent Marker';
+}
+a, a:active{
+    text-decoration: none;
+    color: rgba(000,000,000,0.9)
+}
+    
+
+table{
+    margin: auto;
+}
+#me{
+    border-radius: 50%;
+    padding-top: 1vh;
+}
+.nav{
+    background-color: rgba(127, 255, 212, 0.7);
+    width: 100vw;
+    border-radius: 2vh;
+}
+    .nav li, .nav a {
+        padding: 0 2vh 0 2vh;
+        display: inline-block;
+        /*font*/
+        color: rgba(000,000,000,0.9);
+        font-family: 'Permanent Marker';
+        font-size: 3vh;
+        text-decoration: none;
+    }
+    a:hover{
+        color: rgba(138, 43, 226, 0.6)
+    }
+.header{
+    background-color: rgba(138, 43, 226, 0.9);
+    width: 100vw;
+    font-family: Codystar;
+    font-size: 4vh;
+    font-weight: bolder;
+    border-radius: 7vh;
+    margin: 1vh;
+}
+.container{
+    max-height: 80.3vh;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.footer{
+    background-color: rgba(127, 255, 212, 0.7);
+    width: 100vw;
+    border-radius: 2vh;
+}
+
+.main{
+    border-radius: 8vh;
+    background-color: rgba(175, 216, 233, 0.9);
+    overflow: scroll;
+    scrollbar-width: none;
+    max-width: 600px;
+    margin: 1vh;
+}
+
+.about_me{
+    border-radius: 8vh;
+    background-color: rgba(220, 20, 120, 0.9);
+    overflow: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 400px;
+    margin: 1vh;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container{
+        display: block;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+    #me{
+        max-width: 20vh;
+    }
+    .header{
+        padding-top: 1vh;
+    }
+    .about_me, .main{
+        padding: 1vh;
+    }
+}

@@ -1,0 +1,47 @@
+{% extends 'base.html'%}
+{% block main %}
+    <div id = "languages">
+        <h3>Languages</h3>
+        <table>
+            <tr>
+                <th>Front-End</th>
+                <th>Python</th>
+                <th>JavaScript</th>
+                <th>Database</th>
+                <th>Concpts</th>
+            </tr>
+            <tr>
+                <td>HTML5</td>
+                <td>Django</td>
+                <td>Express</td>
+                <td>MySQL</td>
+                <td>AJAX</td>
+            </tr>
+            <tr>
+                <td>CSS3</td>
+                <td>Flask</td>
+                <td>Mongoose</td>
+                <td>MongoDB</td>
+                <td>OOP</td>
+            </tr>
+            <tr>
+                <td>Bootstrap</td>
+                <td>Unitest</td>
+                <td>React</td>
+                <td></td>
+                <td>REST</td>
+            </tr>
+        </table>
+    </div>
+    {% for i in output %}
+        <div class = "project">
+            <h3>
+                <a href="{{i['url']}}" target="_blank">{{i['name']}}</a>
+            </h3> 
+            {{i['language']}}
+            <p>
+                {{i['description']}}
+            </p>
+        </div>
+    {% endfor %}
+{% endblock %}
