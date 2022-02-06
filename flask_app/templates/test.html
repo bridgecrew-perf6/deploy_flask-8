@@ -1,0 +1,7 @@
+{% extends 'base.html'%}
+{% block main %}
+    {% for i in output %}
+        <p>{{i['first_name']}}</p>
+        <p>{{i['email']}}</p>
+    {% endfor %}
+{% endblock %}

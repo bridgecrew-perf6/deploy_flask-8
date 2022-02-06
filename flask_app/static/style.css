@@ -70,16 +70,19 @@ table{
     margin: 1vh;
 }
 .container{
-    max-height: 80.3vh;
+    height: 80.3vh;
     max-width: 1000px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
 .footer{
     background-color: rgba(127, 255, 212, 0.7);
     width: 100vw;
     border-radius: 2vh;
+    position: absolute;
+    bottom: 0;
 }
 
 .main{
@@ -88,7 +91,9 @@ table{
     overflow: scroll;
     scrollbar-width: none;
     max-width: 600px;
+    min-height: 40vh;
     margin: 1vh;
+    padding: 1vh;
 }
 
 .about_me{
@@ -109,6 +114,7 @@ table{
         display: block;
         overflow: scroll;
         scrollbar-width: none;
+        font-size: 2.5vh;
     }
     #me{
         max-width: 20vh;
@@ -118,5 +124,8 @@ table{
     }
     .about_me, .main{
         padding: 1vh;
+    }
+    .footer{
+        position: static;
     }
 }

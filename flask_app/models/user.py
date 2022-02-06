@@ -38,3 +38,10 @@ class User:
         results = connectToMySQL(cls.db).query_db(query)
         lst = [i for i in results]
         return lst
+    
+    @classmethod
+    def select_all(cls):
+        query = "SELECT * FROM users;"
+        results = connectToMySQL(cls.db).query_db(query)
+        lst = [cls(i) for i in results]
+        return lst

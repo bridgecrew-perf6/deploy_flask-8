@@ -5,7 +5,7 @@ import os
 import requests
 
 @app.route('/')
-def users():
+def home():
     r = requests.get(f'https://api.github.com/users/xtina-lt/repos')
     output=r.json()
     # list of dictionaries in JSON
@@ -25,3 +25,9 @@ def users():
         }
         lst.append(data)
     return render_template('index.html', output = lst)
+
+@app.route('/users')
+def users():
+    results = User.select_all()
+    print(results)
+    return render_template('test.html', output = results)
