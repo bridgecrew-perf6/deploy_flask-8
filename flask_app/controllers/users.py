@@ -26,7 +26,7 @@ def home():
         lst.append(data)
     return render_template('index.html', output = lst)
 
-@app.route('/users')
+@app.route('/test')
 def users():
     results = User.select_all()
     print(results)

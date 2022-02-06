@@ -93,7 +93,11 @@ table{
     max-width: 600px;
     min-height: 40vh;
     margin: 1vh;
-    padding: 1vh;
+    padding: 2vh;
+    max-height: 80.3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .about_me{
@@ -107,6 +111,9 @@ table{
     max-width: 400px;
     margin: 1vh;
 }
+    .larger{
+        min-height: 80.3vh;
+    }
 
 
 @media only screen and (max-width: 600px) {
@@ -123,7 +130,12 @@ table{
         padding-top: 1vh;
     }
     .about_me, .main{
-        padding: 1vh;
+        padding: 2vh;
+        max-width: 90vw;
+        height: min-content;
+    }
+    .about_me{
+        padding: 0;
     }
     .footer{
         position: static;
