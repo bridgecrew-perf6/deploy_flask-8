@@ -70,9 +70,11 @@ main{
 footer{
     background-color: rgba(127, 255, 212, 0.7);
     border-radius: 2vh;
+    /* demensions and positioning */
     width: 100vw;
     position: absolute;
     bottom: 0;
+    /* font */
     font-size: 2vh;
 }
 
@@ -89,13 +91,16 @@ footer{
 .left, .right{
     box-sizing: border-box;
     border-radius: 8vh;
-    overflow: scroll;
-    scrollbar-width: none;
-    padding: 1vh;
-    font-size: 3vh;
-    margin: 1vh;
+    /* dimensions */
     width: 50%;
     max-height: 80.3vh;
+    padding: 1vh;
+    margin: 1vh;
+    /* scroll */
+    overflow: scroll;
+    scrollbar-width: none;
+    /* font */
+    font-size: 3vh;
 }
 
 /* elements */
@@ -120,11 +125,10 @@ table{
 @media only screen and (max-width: 600px) {
     main{
         display:block;
-        background-color: greenyellow;
+        max-height: 70vh;
         overflow: scroll;
         scrollbar-width: none;
         font-size: 3vh;
-        max-height: 70vh;
     }
     #me{
         max-height: 20vh;
@@ -133,8 +137,9 @@ table{
         padding-top: 1vh;
     }
     .left, .right{
-        padding: 2vh;
         width: 90vw;
+        margin: 0 auto;
+        padding: 2vh;
     }
     .left{
         display: flex;
