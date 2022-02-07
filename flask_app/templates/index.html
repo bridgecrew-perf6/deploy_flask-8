@@ -10,17 +10,17 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class = "nav">
+    <nav>
         <ul>
             <li><a href="https://github.com/xtina-lt" target="_blank">Github</a></li>
             <li><a href="https://login.codingdojo.com/dashboard" target="_blank">Dojo</a></li>
         </ul>
-    </div>
-    <div class = "header">
+    </nav>
+    <header>
         <h1>Christina T</h1>
-    </div>
-    <div class = "container">
-        <div class = "about_me larger">
+    </header>
+    <main>
+        <section class="left">
             <ul>
                 <li><img id="me" src="{{ url_for('static', filename='me2.jpg') }}"></li>
                 <li><h2>Contact</h2></li>
@@ -31,8 +31,8 @@
                 <li>I am a developer specializing in: HTML, CSS, JavaScript, and Python.</li>
                 <li>I like nature, being festive, and spending time with loved ones (James and Peanut).</li>
             </ul>
-        </div>
-        <div class = "main">
+        </section>
+        <section class = "right">
             <div id = "languages">
                 <h3>Languages</h3>
                 <table>
@@ -66,7 +66,8 @@
                     </tr>
                 </table>
             </div>
-            {% for i in output %}
+            {%if output:%}
+                {% for i in output %}
                 <div class = "project">
                     <h3>
                         <a href="{{i['url']}}" target="_blank">{{i['name']}}</a>
@@ -76,12 +77,13 @@
                         {{i['description']}}
                     </p>
                 </div>
-            {% endfor %}
+                {% endfor %}
+            {%endif%}
             <a href="/test">Test</a>
-        </div>
-    </div>
-    <div class = "footer">
+        </section>
+    </main>
+    <footer>
         &copy; Copyright. All Rights Reserved.
-    </div>
+    </footer>
 </body>
 </html>

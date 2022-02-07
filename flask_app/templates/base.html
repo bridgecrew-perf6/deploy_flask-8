@@ -10,17 +10,17 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class = "nav">
+    <nav>
         <ul>
             <li><a href="https://github.com/xtina-lt" target="_blank">Github</a></li>
             <li><a href="https://login.codingdojo.com/dashboard" target="_blank">Dojo</a></li>
         </ul>
-    </div>
-    <div class = "header">
+    </nav>
+    <header>
         <h1>Christina T</h1>
-    </div>
-    <div class = "container">
-        <div class = "about_me">
+    </header>
+    <main>
+        <section class ="left">
             <ul>
                 <li><img id="me" src="{{ url_for('static', filename='me2.jpg') }}"></li>
                 <li><h2>Contact</h2></li>
@@ -31,14 +31,14 @@
                 <li>I am a developer specializing in: HTML, CSS, JavaScript, and Python.</li>
                 <li>I like nature, being festive, and spending time with loved ones (James and Peanut).</li>
             </ul>
-        </div>
-        <div class = "main">
+        </section>
+        <section class="right">
             {%block main%} 
             {%endblock%}
-        </div>
-    </div>
-    <div class = "footer">
+        </section>
+    </main>
+    <footer>
         &copy; Copyright. All Rights Reserved.
-    </div>
+    </footer>
 </body>
 </html>
