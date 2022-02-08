@@ -86,13 +86,18 @@ footer{
     background-color: rgba(220, 20, 120, 0.9);
     overflow: scroll;
     scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+    .tall{
+        height: 80.3vh;
+    }
 
 .left, .right{
     box-sizing: border-box;
     border-radius: 8vh;
     /* dimensions */
-    width: 50%;
     max-height: 80.3vh;
     padding: 1vh;
     margin: 1vh;
@@ -100,7 +105,7 @@ footer{
     overflow: scroll;
     scrollbar-width: none;
     /* font */
-    font-size: 3vh;
+    font-size: 2vh;
 }
 
 /* elements */
@@ -116,7 +121,43 @@ a, a:active{
 #me{
     border-radius: 50%;
     padding-top: 1vh;
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
 }
+    .fade_in{
+        animation: fadeIn 3s;
+        -webkit-animation: fadeIn 3s;
+        -moz-animation: fadeIn 3s;
+        -o-animation: fadeIn 3s;
+        -ms-animation: fadeIn 3s;
+    }
+    @keyframes fadeIn {
+        0% {opacity:0;}
+        100% {opacity:1;}
+    }
+    
+    @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
+    
+    @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+    }
 
 table{
     margin: 0 auto;
@@ -136,13 +177,16 @@ table{
     header{
         padding-top: 1vh;
     }
-    .left, .right{
+    .left, .right, .tall{
         width: 90vw;
         margin: 0 auto;
         padding: 2vh;
+        height: max-content;
+        font-size: 3vh;
     }
     .left{
         display: flex;
+        flex-direction: row;
         align-items: center;
     }
     footer{
@@ -163,13 +207,14 @@ table{
     #me{
         max-height: 40vh;
     }
-    .left, .right{
+    .left, .right, .tall{
         width: 100vw;
         font-size: 10vh;
         height: max-content;
     }
     .left{
         display: flex;
+        flex-direction: row;
     }
     header{
         padding-top: 1vh;
@@ -183,3 +228,4 @@ table{
         font-size: 10vh;
     }
 }
+

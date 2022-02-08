@@ -14,7 +14,7 @@ def home():
     lst=[]
     # empty list to add dictionaries of output
     print(lst)
-    if output == 'message': # incase hit github limit
+    if output != 'message': # incase hit github limit
         for i in output:
             print(i)
             count += 1;
@@ -26,6 +26,8 @@ def home():
                 "url": i['html_url']
             }
             lst.append(data)
+    else:
+        print(output)
     return render_template('index.html', output = lst)
 
 @app.route('/test')
