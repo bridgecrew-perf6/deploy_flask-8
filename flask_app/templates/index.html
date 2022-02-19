@@ -26,7 +26,7 @@
             <div class = "left">
                 <ul>
                     <li>
-                        <img id="me" class="fade_in" src="{{ url_for('static', filename='me2.jpg') }}">
+                        <img id="me" class="medium_fade" src="{{ url_for('static', filename='me2.jpg') }}">
                     </li>
                     <li>
                         <h2>
@@ -52,7 +52,7 @@
                 </ul>
             </div>
             <div class = "right">
-                <section class = "project">
+                <section class = "project long_fade">
                     <h3>
                         Languages
                     </h3>
@@ -89,7 +89,7 @@
                 </section>
                 {%if output:%}
                 {% for i in output %}
-                    <section class = "project">
+                    <section class = "project long_fade">
                         <h3>
                             <a href="{{i['url']}}" target="_blank">{{i['name']}}</a>
                         </h3> 
