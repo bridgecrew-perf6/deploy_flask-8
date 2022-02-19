@@ -1,123 +1,90 @@
+
 *{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
-}
-ul {
-    list-style-type: none;
-}
-html{
-        /*background*/
-        background-image: url("bk.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        width: 100vw;
-        height: 100vh;
 }
 body{
-    /* dimensions */
-    height: 98vh;
-    width: 98vw;
-    /*font*/
-    font-family: 'Shadows Into Light';
-    font-size: 2vh;
-    color: rgba(000,000,000,0.9);
-    text-align: center;
-}
-
-nav{
-    background-color: rgba(127, 255, 212, 0.7);
+    /*background*/
+    background-image: url("bk.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100vw;
-    border-radius: 2vh;
+    height: 100vh;
 }
-    nav li, nav a {
-        padding: 0 2vh 0 2vh;
-        display: inline-block;
+    .container{
+        /* dimensions */
+        height: 100vh;
+        width: 100vw;
         /*font*/
+        font-family: 'Shadows Into Light';
+        font-size: 2vh;
         color: rgba(000,000,000,0.9);
+        text-align: center;
+        /* flex it */
+        display: flex; /*change for phone*/
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    nav, footer{
+        background-color: rgba(127, 255, 212, 0.7);
+        border-radius: 2vh;
+    }
+        nav{
+            margin-bottom: 0.5vh;
+            font-family: 'Permanent Marker';
+            font-size: 3vh;
+        }
+    header{
+        /* background and border */
+        background-color: rgba(138, 43, 226, 0.9);
+        border-radius: 8vh;
+        /* font */
+        font-family: Codystar;
+        font-size: 4vh;
+        font-weight: bolder;
+    }
+        main{
+            border-radius: 8vh;
+            /* sizing */
+            height: 75vh;
+            width: 100vw;
+            max-width: 1000px; /*change for phone*/
+            /* center */
+            display: flex; /*change for phone*/
+            align-items: center;
+            justify-content: space-evenly; /*addscroll for phone*/
+            margin: 0 auto; /*didnt flex horizion */
+        }
+        .left{
+            background-color: rgba(220, 20, 120, 0.9);
+            border-radius: 5vh;
+            padding: 1vh;
+            max-height: min-content;
+            max-width: 250px;
+            margin-right: 1vh; /*cff*/
+            margin-left: 1vh; /*cff*/
+        }
+        .right{
+            max-height: 75vh;
+            max-width: 60vw;
+            min-width: 300px;
+            padding: 1vh;
+            overflow-y: scroll;
+            scrollbar-width: none;
+            margin-right: 1vh; /*cff*/
+        }
+        .project{
+            background-color: rgba(175, 216, 233, 0.9);
+            border-radius: 5vh;
+            padding: 1vh;
+            height: max-content;
+            margin-bottom: 1vh;
+        }
+    h2,h3,h4,h5,h6{
         font-family: 'Permanent Marker';
-        font-size: 3vh;
-        text-decoration: none;
     }
-    a:hover{
-        color: rgba(138, 43, 226, 0.6)
-    }
-
-header{
-    /* background and border */
-    background-color: rgba(138, 43, 226, 0.9);
-    border-radius: 7vh;
-    /* sizing */
-    margin: 1vh auto;
-    width: 100vw;
-    /* font */
-    font-family: Codystar;
-    font-size: 4vh;
-    font-weight: bolder;
-}
-main{
-    /* sizing */
-    height: 80.3vh;
-    max-width: 1000px;
-    /* center */
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-footer{
-    background-color: rgba(127, 255, 212, 0.7);
-    border-radius: 2vh;
-    /* demensions and positioning */
-    width: 100vw;
-    position: absolute;
-    bottom: 0;
-    /* font */
-    font-size: 2vh;
-}
-
-.right{
-    background-color: rgba(175, 216, 233, 0.9);
-}
-
-.left{
-    background-color: rgba(220, 20, 120, 0.9);
-    overflow: scroll;
-    scrollbar-width: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-    .tall{
-        height: 80.3vh;
-    }
-
-.left, .right{
-    box-sizing: border-box;
-    border-radius: 8vh;
-    /* dimensions */
-    max-height: 80.3vh;
-    padding: 1vh;
-    margin: 1vh;
-    /* scroll */
-    overflow: scroll;
-    scrollbar-width: none;
-    /* font */
-    font-size: 2vh;
-}
-
-/* elements */
-h2, h3, h3, h4, h5{
-    font-family: 'Permanent Marker';
-}
-a, a:active{
-    text-decoration: none;
-    color: rgba(000,000,000,0.9)
-}
-    
-
+/* IMAGE AND FADE */
 #me{
     border-radius: 50%;
     padding-top: 1vh;
@@ -159,73 +126,95 @@ a, a:active{
     100% {opacity:1;}
     }
 
-table{
-    margin: 0 auto;
+/* LISTS */
+nav li{
+    display: inline;
+    padding: 0 2vh 0 2vh;
 }
-
+ul li{
+    list-style: none;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+    a:hover{
+        color: rgba(138, 43, 226, 0.6)
+    }
+/* TABLES */
+table{
+    width: 100%;
+    margin-bottom: 2vh;
+}
+    td, th {
+        border: 0.05vh solid rgba(221, 221, 221, 0.4);
+        padding: 1vh;
+        text-align: center;
+    }
+    th {
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh;
+        background-color: rgba(138, 43, 226, 0.6);
+        color: white;
+    }
+    tr:nth-child(even){
+        background-color: rgba(242, 242, 242, 0.4); /*darker*/
+    }
+    tr:hover {
+        background-color: rgba(221, 221, 221, 0.4);
+    }
+/* PHONE */
 @media only screen and (max-width: 600px) {
     main{
         display:block;
-        max-height: 70vh;
+        max-height: 80vh;
         overflow: scroll;
         scrollbar-width: none;
         font-size: 3vh;
     }
-    #me{
-        max-height: 20vh;
-    }
-    header{
-        padding-top: 1vh;
-    }
-    .left, .right, .tall{
-        width: 90vw;
-        margin: 0 auto;
-        padding: 2vh;
-        height: max-content;
-        font-size: 3vh;
+    .left, .right{
+        max-width: 100vw;
+        margin: 0;
     }
     .left{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        margin-bottom: 1vh;
     }
     footer{
         position: static;
     }
 }
 
+/* mobile horizion */
 @media only screen and (max-device-height: 480px) and (orientation: landscape) {
-    html{
-        height: 110vh;
+    .container{
+        box-sizing: border-box;
+        height: 100vh;
+        display: block;
+        font-size: 5vh;
+        overflow-y: scroll;
     }
     main{
-        display:block;
-        width: 100vw;
-        overflow: scroll;
-        scrollbar-width: none;
+        box-sizing: border-box;
+        display: inline;
     }
-    #me{
-        max-height: 40vh;
-    }
-    .left, .right, .tall{
-        width: 100vw;
-        font-size: 10vh;
-        height: max-content;
+    .left, .right{
+        box-sizing: border-box;
+        overflow-y: scroll;
+        max-height: min-content;
+        max-width: 100vw;
     }
     .left{
-        display: flex;
-        flex-direction: row;
+        max-width: min-content;
+        margin: 0 auto;
     }
-    header{
-        padding-top: 1vh;
-        font-size: 10vh;
+    a, header{
+        font-size: 5vh;
     }
-    footer{
-        position: relative;
-        font-size: 3vh;
+    nav, header, .left, .right{
+        margin-bottom: 1.5vh;
     }
-    nav li, nav a{
-        font-size: 10vh;
+    nav, footer {
+        border-radius: 6vh;
     }
 }
 
